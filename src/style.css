@@ -12,22 +12,22 @@ body {
 }
 
 .container {
-    background-color: aquamarine;
     margin: 10vh 6%;
+    height: 50vh;
     display: flex;
-    justify-content: space-between;
 }
 
-.scrores_form {
+.scores_form {
     display: block;
+    height: 100%;
+    width: 30%;
+    margin: 0% 5%;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    height: 63%;
     margin-top: 3vh;
-    margin-bottom: 0%;
     justify-content: space-between;
 }
 
@@ -38,7 +38,7 @@ form {
 .list_header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3vh;
+    margin-bottom: 6vh;
 }
 
 .scores ul {
@@ -49,10 +49,19 @@ form {
    
 }
 
+input , form button {
+    margin: 3vh 0;
+    height: 5vh;
+}
+
 .scores li:nth-child(even) {
     background-color: #ddd;
   }
 
-li , input {
-    padding: 2%;
+li {
+    padding: 3%;
 }  
+
+form button {
+    align-self: end;
+}
