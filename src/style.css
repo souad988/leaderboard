@@ -1,3 +1,66 @@
+@import url('https://fonts.cdnfonts.com/css/lato-light');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'lato', sans-serif;
+}
+
 body {
-    background-color: bisque;
+  background-color: rgb(253, 252, 251);
+  margin: 10%;
+}
+
+.container {
+  margin: 10vh 6%;
+  height: 50vh;
+  display: flex;
+}
+
+.scores_form {
+  display: block;
+  height: 100%;
+  width: 30%;
+  margin: 0% 5%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+  justify-content: space-between;
+}
+
+.scores {
+  width: 60%;
+}
+
+.list_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6vh;
+}
+
+.scores ul {
+  list-style: none;
+  background-color: white;
+  border: 2px solid black;
+}
+
+input,
+form button {
+  margin: 3vh 0;
+  height: 5vh;
+}
+
+li {
+  padding: 3%;
+}
+
+.scores li:nth-child(even) {
+  background-color: #ddd;
+}
+
+form button {
+  align-self: end;
 }
