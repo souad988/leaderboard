@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/58aa8d2b83.js" crossorigin="anonymous"></script>
     <title>Leaderboard</title>
+   
 </head>
 <body>
-    <h1>Leaderboard</h1>
+    <header>
+    <!-- solid style -->
+    <i class="fas fa-trophy"></i>
+    <h1>Leaderboard</h1></header>
     <div class="container">
         <section class="scores">
             <div class="list_header">
                 <h2>Recent scores</h2>
-                <button id="refresh">Refresh</button>
+                <button id="refresh">Refresh<i class="fas fa-sync"></i></button>
             </div>
+            <div class="shadow">
             <ul class="scores_list">
-               
+               <!--<i class="fas fa-star"></i>-->
             </ul>
+        </div>
         </section>
         <section class="scores_form">
             <h2>Add your score</h2>
@@ -23,8 +30,8 @@
            
             <form action="submit">
                 <input type="text" placeholder="Your name" id="user"/>
-                <input type="text" placeholder="Your score" id="score"/>
-                <button type="button" id="addScore">Submit</button>
+             <input type="text" placeholder="Your score" id="score"/>
+               <button type="button" id="addScore">Add<i class="fas fa-plus"></i></button>
             </form>
         </section>
     </div>

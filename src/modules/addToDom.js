@@ -3,12 +3,22 @@ const addNewScore = async (game, user, score, request) => {
   return response;
 };
 
-const createScoreElement = (score) => `<li class="score_row">${score.user}:${score.score}</li>`;
+const createScoreElement = (score, medalColor) => `<li class="score_row"><strong>${score.user}:${score.score}</strong><i class="fas fa-medal ${medalColor}"></i></li>`;
+
+const sort = (mscores) => {
+  mscores.sort((a, b) => a.score - b.score);
+  return mscores.reverse();
+};
 
 const addScoresToDom = async (request, game, ulElement) => {
-  const scores = await game.getScores(request);
+  const response = await game.getScores(request);
+  const scores = sort(response.result);
   ulElement.innerHTML = '';
-  scores.result.forEach((item) => {
+  ulElement.innerHTML += createScoreElement(scores[0], 'gold');
+  ulElement.innerHTML += createScoreElement(scores[1], 'argent');
+  ulElement.innerHTML += createScoreElement(scores[2], 'bronze');
+  const listRegulareScores = scores.splice(0, 3);
+  listRegulareScores.forEach((item) => {
     ulElement.innerHTML += createScoreElement(item);
   });
 };
