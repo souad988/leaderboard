@@ -46,8 +46,8 @@ form {
   background-color: white;
   border: 2px solid black;
   height: 40vh;
-  overflow:hidden;
-  overflow-y:scroll;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 input,
@@ -66,4 +66,17 @@ li {
 
 form button {
   align-self: end;
+}
+
+.success_msg {
+  color: green;
+  content: 'new score added successfully!';
+}
+
+.error_msg {
+  color: red;
+}
+
+.show_msg {
+  display: flex;
 }
