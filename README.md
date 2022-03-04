@@ -1,8 +1,13 @@
 # Leaderboard
 
-Javascript App to add and display student scores 
+Javascript App to add and display game scores 
+
+![CPT2203042337-1352x589](https://user-images.githubusercontent.com/59707859/156851453-4d222303-6142-4c37-b895-1b70a7481b06.png)
+![CPT2203042333-1364x648](https://user-images.githubusercontent.com/59707859/156851522-92447872-8256-452a-ac32-4da48defe484.png)
+![CPT2203042337-1359x595](https://user-images.githubusercontent.com/59707859/156851569-45aaa027-f320-4618-9932-ca5a9fdfe5fe.png)
 
 ## Built With
+
 
 -HTML & Javascript
 
