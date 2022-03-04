@@ -45,6 +45,9 @@ form {
   list-style: none;
   background-color: white;
   border: 2px solid black;
+  height: 40vh;
+  overflow:hidden;
+  overflow-y:scroll;
 }
 
 input,
