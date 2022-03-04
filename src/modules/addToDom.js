@@ -17,8 +17,8 @@ const addScoresToDom = async (request, game, ulElement) => {
   ulElement.innerHTML += createScoreElement(scores[0], 'gold');
   ulElement.innerHTML += createScoreElement(scores[1], 'argent');
   ulElement.innerHTML += createScoreElement(scores[2], 'bronze');
-  const listRegulareScores = scores.splice(0, 3);
-  listRegulareScores.forEach((item) => {
+  scores.splice(0, 3);
+  scores.forEach((item) => {
     ulElement.innerHTML += createScoreElement(item);
   });
 };
