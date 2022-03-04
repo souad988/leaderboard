@@ -2,6 +2,7 @@
 import './style.css';
 import Game from './modules/games';
 import Request from './modules/request';
+import {addNewScore,addScoresToDom} from './modules/addToDom';
 const id="QzuepOdb4S7f14QxmbA0";
 const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
 
@@ -11,20 +12,15 @@ const user=document.getElementById('user');
 const score=document.getElementById('score');
 const addScoreBtn=document.getElementById('addScore');
 const refresh=document.getElementById('refresh');
+const scoreList=document.querySelector('.scores_list');
+
+addScoresToDom(request,game,scoreList);
+
 addScoreBtn.addEventListener('click',()=>{
-  game.addScore(user.value,score.value,request).then(res=>{
-     if(res.status===201){
-      alert('score added successfuly.');
-    }else{
-      alert('server doesn\'t respond');
-    }
-  })
- 
+  addNewScore(game,user.value,score.value,request);
 });
+
+
 refresh.addEventListener('click',async()=>{
-  var list=await game.getScore(request);
- console.log('from index js ',list) ;
+  addScoresToDom(request,game,scoreList);
 })
-function addScoreToDom(score){
-  return `<li class="score_row">${score.user}:${score.score}</li>`;
-}

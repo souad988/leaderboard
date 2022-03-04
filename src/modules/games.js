@@ -8,11 +8,9 @@ export default class Game {
   addScore(user,score,request){
     return request.post([this.id,'scores'].join('/'),{user,score}) 
     }
-  async getScore(request){
+  async getScores(request){
     var response=await request.get([this.id,'scores'].join('/'));
-    
-    console.log(result);
-    this.scores=result.value.result;
+    this.scores=response.json();
     return this.scores;  
 }
 }
