@@ -17,6 +17,20 @@ const addScoreBtn = document.getElementById('addScore');
 const refresh = document.getElementById('refresh');
 const scoreList = document.querySelector('.scores_list');
 const msgContainer = document.querySelector('.msg');
+const Light = document.querySelector('.light');
+const Dark = document.querySelector('.night');
+
+Light.addEventListener('click', () => {
+  document.documentElement.style.setProperty('--dark-light', 'white');
+  Light.classList.toggle('show');
+  Dark.classList.toggle('show');
+});
+
+Dark.addEventListener('click', () => {
+  document.documentElement.style.setProperty('--dark-light', 'black');
+  Light.classList.toggle('show');
+  Dark.classList.toggle('show');
+});
 
 addScoresToDom(request, game, scoreList);
 
