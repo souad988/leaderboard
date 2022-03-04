@@ -11,21 +11,20 @@
         <section class="scores">
             <div class="list_header">
                 <h2>Recent scores</h2>
-                <button>Refresh</button>
+                <button id="refresh">Refresh</button>
             </div>
             <ul class="scores_list">
-                <li>90 </li>
-                <li>30</li>
-                <li>85</li>
-                <li>69</li>
+               
             </ul>
         </section>
         <section class="scores_form">
             <h2>Add your score</h2>
+            <p class="msg"></p>
+           
             <form action="submit">
-                <input type="text" placeholder="Your name"/>
-                <input type="text" placeholder="Your score"/>
-                <button type="button">Submit</button>
+                <input type="text" placeholder="Your name" id="user"/>
+                <input type="text" placeholder="Your score" id="score"/>
+                <button type="button" id="addScore">Submit</button>
             </form>
         </section>
     </div>
