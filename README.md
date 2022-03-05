@@ -2,11 +2,9 @@
 
 Javascript App to add and display game scores 
 
-![Uploading CPT2203050000-804x568.gif…]()
 
-![CPT2203042337-1352x589](https://user-images.githubusercontent.com/59707859/156851453-4d222303-6142-4c37-b895-1b70a7481b06.png)
-
-![CPT2203042337-1359x595](https://user-images.githubusercontent.com/59707859/156851569-45aaa027-f320-4618-9932-ca5a9fdfe5fe.png)
+![leaderborddark](https://user-images.githubusercontent.com/59707859/156883420-2887cb54-a969-4a09-be5a-ee5f511f56eb.PNG)
+![leaderborderror](https://user-images.githubusercontent.com/59707859/156883423-9d78d09e-4aa9-4cdd-beda-b9e7c07ad849.PNG)
 
 ## Built With
 
