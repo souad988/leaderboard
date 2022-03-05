@@ -1,6 +1,6 @@
 # Leaderboard
 
-Javascript App to add and display game scores 
+Javascript App to add and display game scores, stores the data in an external api and can handle different error and success request responses and display a message to the user. this project is built using HTML/CSS and vanilla Javascript.
 
 
 ![leaderborddark](https://user-images.githubusercontent.com/59707859/156883420-2887cb54-a969-4a09-be5a-ee5f511f56eb.PNG)
