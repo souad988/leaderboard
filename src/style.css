@@ -1,58 +1,234 @@
 @import url('https://fonts.cdnfonts.com/css/lato-light');
 
-*{
-    margin: 0%;
-    padding: 0%;
-    font-family: 'lato', sans-serif;
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: 'lato', sans-serif;
+  color: white;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+:root {
+  --dark-light: black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #256eff;
 }
 
 body {
-    background-color: rgb(253, 252, 251);
-    margin: 10%;
+  background: var(--dark-light);
+  padding: 5% 5%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  background-color: #060606;
+  padding-left: 10px;
+  margin: 3vh 0;
+  height: 35px;
+  box-shadow: 3px 3px 6px #256eff;
+}
+
+::placeholder {
+  color: white;
+}
+
+button {
+  height: 35px;
+  padding: 0% 5px;
+  box-shadow: 3px 3px 6px #256eff;
+  cursor: pointer;
+}
+
+form button {
+  align-self: end;
+}
+
+input,
+form button,
+#refresh {
+  background-color: #060606;
+  border: none;
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+button:hover {
+  opacity: 0.7;
+  padding: 7px;
+}
+
+h2,
+h1 {
+  color: white;
+  text-shadow: 3px 3px 10px #256eff, 3px -3px 10px #256eff, -3px 3px 10px #256eff, -3px 3px 10px #256eff;
 }
 
 .container {
-    background-color: aquamarine;
-    margin: 10vh 6%;
-    display: flex;
-    justify-content: space-between;
+  margin: 10vh 6%;
+  height: 50vh;
+  display: flex;
 }
 
-.scrores_form {
-    display: block;
+.scores_form {
+  display: block;
+  width: 30%;
+  margin: 0% 5%;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    height: 63%;
-    margin-top: 3vh;
-    margin-bottom: 0%;
-    justify-content: space-between;
+.scores_form h2 {
+  margin-bottom: 6vh;
 }
 
 .scores {
-    width: 60%;
+  width: 60%;
+}
+
+@media (max-width: 778px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scores_form {
+    width: 80%;
+    margin: 0%;
+  }
+
+  .scores {
+    width: 80%;
+    margin-bottom: 5vh;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .list_header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6vh;
+}
+
+.shadow {
+  padding: 18px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 12px 12px var(--dark-light), inset 0 0 3px 2px var(--dark-light);
+  background: linear-gradient(to right, #256eff, #256eff);
 }
 
 .scores ul {
-   list-style: none;
-   background-color: white;
-   border: 2px solid black;
-
-   
+  list-style: none;
+  border-radius: 4px;
+  padding: 3px;
+  height: 41vh;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
-.scores li:nth-child(even) {
-    background-color: #ddd;
-  }
+li {
+  padding: 10px;
+  margin-top: 2px;
+  border-radius: 10px;
+  color: #f84f60;
+  font-weight: 600;
+  background-color: black;
+}
 
-li , input {
-    padding: 2%;
-}  
+.success_msg {
+  color: #256eff;
+  content: 'new score added successfully!';
+}
+
+.error_msg {
+  color: #f84f60;
+}
+
+.show_msg {
+  display: flex;
+}
+
+.fa-trophy {
+  color: #256eff;
+  font-size: x-large;
+  margin-right: 20px;
+}
+
+.fa-trophy:hover {
+  font-size: xx-large;
+  margin-right: 10px;
+}
+
+.fa-medal,
+.fa-sync,
+.fa-plus {
+  margin-left: 5px;
+  color: #256eff;
+}
+
+.gold {
+  color: yellow;
+  text-shadow: 3px 3px 50px yellow, 3px -3px 50px yellow, -3px 3px 50px yellow, -3px 3px 50px yellow;
+}
+
+.argent {
+  color: gainsboro;
+  text-shadow: 3px 3px 50px gainsboro, 3px -3px 50px gainsboro, -3px 3px 50px gainsboro, -3px 3px 50px gainsboro;
+}
+
+.bronze {
+  color: chocolate;
+  text-shadow: 3px 3px 50px chocolate, 3px -3px 50px chocolate, -3px 3px 50px chocolate, -3px 3px 50px chocolate;
+}
+
+.score_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.light,
+.night {
+  position: absolute;
+  margin-left: 90%;
+  display: none;
+}
+
+.light * {
+  color: yellow;
+}
+
+.night * {
+  color: #060606;
+}
+
+.show {
+  display: block;
+}
